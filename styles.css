@@ -1126,6 +1126,32 @@ img { display: block; max-width: 100%; }
 
 .honor-strip b { font-size: clamp(17px, 2vw, 27px); }
 
+/* Keep the editorial style while restoring readable weights for Chinese text. */
+.brand-mark,
+.brand-meta,
+.desktop-nav a,
+.hero-kicker,
+.portrait-index,
+.portrait-wrap figcaption,
+.timeline time,
+.timeline article span,
+.honor-strip b {
+  font-weight: 650;
+}
+
+.hero h1,
+.metrics strong {
+  font-weight: 700;
+}
+
+.inline-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+}
+
 .contact-section {
   position: relative;
   min-height: 100svh;
