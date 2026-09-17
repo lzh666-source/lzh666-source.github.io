@@ -1,0 +1,22 @@
+/* Keep the visual hierarchy strong without making every label look heavy. */
+.logo { font-weight: 700; }
+.hello,
+.title small,
+.body small,
+.event time { font-weight: 650; }
+.hero h1 { font-weight: 700; letter-spacing: -2px; }
+.hero h2 { font-weight: 500; }
+.btn { font-weight: 600; }
+.fact b { font-weight: 650; }
+.title h2,
+.body h3,
+.event h3,
+.panel h3 { font-weight: 650; }
+.cover { font-weight: 700; }
+.inline-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.inline-link:hover { color: var(--ink); }
