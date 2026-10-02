@@ -13,9 +13,7 @@
       title: "LAVID",
       summary: "面向资源受限场景的轻量级音视频深度伪造检测。",
       detail: "独立训练视觉分支与 mouth-mel 同步分支，再以受控权重融合同步异常信号，避免模型退化为只依赖视觉的判别器。研究重点不是简单增加音频输入，而是验证模型是否真正使用跨模态一致性。",
-      tags: ["PyTorch", "MobileNetV2", "Audio-Visual Sync"],
-      image: "assets/lavid.png",
-      alt: "LAVID 音视频深伪检测框架图"
+      tags: ["PyTorch", "MobileNetV2", "Audio-Visual Sync"]
     },
     dasc: {
       index: "02",
@@ -23,9 +21,7 @@
       title: "DASC-GNN",
       summary: "识别同时进行特征伪装与关系伪装的欺诈节点。",
       detail: "面向图欺诈检测中的特征伪装与关系伪装，结合标签增强节点表示、密度感知子结构对比损失和多关系聚合器。作为共同作者参与研究，论文正在 IEEE TDSC 审稿。",
-      tags: ["GNN", "Contrastive Learning", "Fraud Detection"],
-      image: "assets/dasc-gnn.jpg",
-      alt: "DASC-GNN 图神经网络框架图"
+      tags: ["GNN", "Contrastive Learning", "Fraud Detection"]
     },
     aigc: {
       index: "03",
@@ -33,9 +29,7 @@
       title: "AIGC-Trust",
       summary: "把 AIGC 检测扩展成可验证、可追踪、可部署的内容安全系统。",
       detail: "融合图像、视频和文本 AIGC 检测，结合频域异常、时序一致性、SM2/SM3 与审计哈希链，让一次检测结果不再只是分数，而是可以复核与追踪的证据。",
-      tags: ["ViT / BERT", "FastAPI", "SM2 / SM3"],
-      image: "assets/aigc-trust.jpg",
-      alt: "AIGC-Trust 系统架构图"
+      tags: ["ViT / BERT", "FastAPI", "SM2 / SM3"]
     },
     avcd: {
       index: "04",
@@ -43,9 +37,7 @@
       title: "AVCD",
       summary: "从完整复现出发，建立后续轻量化研究基础。",
       detail: "复现音视频耦合网络及数据预处理、声谱特征、口型区域提取、训练和评估流程，为后续轻量化研究建立可重复的实验基础。",
-      tags: ["Python", "Librosa", "OpenCV"],
-      image: "",
-      alt: ""
+      tags: ["Python", "Librosa", "OpenCV"]
     },
     mnist: {
       index: "05",
@@ -53,9 +45,7 @@
       title: "MNIST CNN",
       summary: "手写数字识别、训练与结果可视化。",
       detail: "使用 TensorFlow 完成数据增强、卷积网络设计、训练与可视化分析，测试准确率约 98%。",
-      tags: ["TensorFlow", "CNN", "Visualization"],
-      image: "",
-      alt: ""
+      tags: ["TensorFlow", "CNN", "Visualization"]
     },
     qt: {
       index: "06",
@@ -63,9 +53,7 @@
       title: "Qt Minesweeper",
       summary: "把经典算法做成稳定、完整的桌面应用。",
       detail: "使用 C++ / Qt 实现递归展开、多难度计时、主题切换和模块化界面。",
-      tags: ["C++", "Qt", "Recursion"],
-      image: "",
-      alt: ""
+      tags: ["C++", "Qt", "Recursion"]
     }
   };
 
@@ -122,7 +110,11 @@
 
   const themeToggle = document.querySelector("#themeToggle");
   const storedTheme = localStorage.getItem("leo-theme");
-  if (storedTheme) root.dataset.theme = storedTheme;
+  if (storedTheme === "dark" || storedTheme === "light") {
+    root.dataset.theme = localStorage.getItem("leo-theme-version") === "2" ? storedTheme : (storedTheme === "dark" ? "light" : "dark");
+  }
+  localStorage.setItem("leo-theme", root.dataset.theme);
+  localStorage.setItem("leo-theme-version", "2");
   themeToggle.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     localStorage.setItem("leo-theme", root.dataset.theme);
@@ -331,12 +323,6 @@
     document.querySelector("#dialogSummary").textContent = data.summary;
     document.querySelector("#dialogDetail").textContent = data.detail;
     document.querySelector("#dialogTags").innerHTML = data.tags.map((tag) => `<span>${tag}</span>`).join("");
-    const image = document.querySelector("#dialogImage");
-    image.hidden = !data.image;
-    if (data.image) {
-      image.src = data.image;
-      image.alt = data.alt;
-    }
     dialog.showModal();
     body.classList.add("dialog-open");
   };
@@ -344,7 +330,7 @@
   document.querySelectorAll("[data-project]").forEach((element) => {
     element.addEventListener("click", () => openProject(element.dataset.project));
     element.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
+      if (element.tagName !== "BUTTON" && (event.key === "Enter" || event.key === " ")) {
         event.preventDefault();
         openProject(element.dataset.project);
       }

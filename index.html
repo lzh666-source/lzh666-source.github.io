@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0c0f">
+  <meta name="theme-color" content="#f8fafc">
   <title>梁子豪 / Leo NEW — LLM & NLP Research</title>
   <meta name="description" content="梁子豪的个人科研主页：大模型、自然语言处理与结构化大模型研究。">
   <meta property="og:type" content="website">
@@ -14,8 +14,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://lzh666-source.github.io/assets/og.png">
   <link rel="preload" href="assets/portrait.jpg" as="image">
-  <link rel="stylesheet" href="styles.css">
-  <script src="interactions.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261002">
+  <script src="interactions.js?v=20261002" defer></script>
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
@@ -84,13 +84,13 @@
         </figure>
 
         <div class="hero-intro" data-reveal>
-          <p class="hero-kicker" data-zh="你好，我是梁子豪 · NEW。" data-en="HI, I'M LEO LIANG · NEW.">你好，我是梁子豪 · NEW。</p>
-          <p class="hero-copy" data-zh="已保研至<span>哈尔滨工业大学</span>，加入哈工大<span>赛尔实验室</span>，聚焦大模型与自然语言处理。" data-en="Admitted to <span>Harbin Institute of Technology</span> for graduate study and joining the <span>HIT Sail Lab</span>, focusing on LLMs and NLP.">
-            已保研至<span>哈尔滨工业大学</span>，加入哈工大<span>赛尔实验室</span>，聚焦大模型与自然语言处理。
+          <p class="hero-kicker" data-zh="梁子豪 · Leo Liang" data-en="LEO LIANG">梁子豪 · Leo Liang</p>
+          <p class="hero-copy" data-zh="保研至<span>哈尔滨工业大学</span>，加入<span>SCIR实验室</span>，聚焦大模型与自然语言处理。" data-en="Admitted to <span>Harbin Institute of Technology</span> for graduate study and joining the <span>HIT SCIR Lab</span>, focusing on LLMs and NLP.">
+            保研至<span>哈尔滨工业大学</span>，加入<span>SCIR实验室</span>，聚焦大模型与自然语言处理。
           </p>
           <div class="hero-cta">
             <a class="button button-primary magnetic" href="#work">
-              <span data-zh="探索我的项目" data-en="EXPLORE MY WORK">探索我的项目</span>
+              <span data-zh="查看研究项目" data-en="VIEW RESEARCH PROJECTS">查看研究项目</span>
               <b aria-hidden="true">↘</b>
             </a>
             <a class="button button-ghost magnetic" href="https://github.com/lzh666-source" target="_blank" rel="noreferrer">
@@ -99,17 +99,8 @@
           </div>
         </div>
 
-        <div class="hero-coordinate" data-reveal aria-hidden="true">
-          <span>37.5° N</span>
-          <span>122.1° E</span>
-          <i></i>
-        </div>
       </div>
 
-      <a class="scroll-cue" href="#work" aria-label="向下滚动查看项目">
-        <span>SCROLL TO DISCOVER</span>
-        <i aria-hidden="true"></i>
-      </a>
     </section>
 
     <div class="marquee" aria-hidden="true">
@@ -127,8 +118,8 @@
       <div class="section-heading" data-reveal>
         <div>
           <span class="section-index">01 / SELECTED WORK</span>
-          <h2 id="work-title" data-zh="选择重要的事，<br>做得<span>更深一点。</span>" data-en="CHOOSE WHAT MATTERS.<br>GO <span>ONE LEVEL DEEPER.</span>">
-            选择重要的事，<br>做得<span>更深一点。</span>
+          <h2 id="work-title" data-zh="研究与项目" data-en="RESEARCH &amp; PROJECTS">
+            研究与项目
           </h2>
         </div>
         <p data-zh="从模型复现到方法创新，再到可信系统工程。每一个项目都从一个具体问题开始。" data-en="From reproduction to method innovation and trustworthy systems engineering. Every project begins with a concrete problem.">
@@ -138,12 +129,8 @@
 
       <div class="project-list">
         <article class="project project-featured tilt-card" data-project="lavid" data-cursor="OPEN" tabindex="0" role="button" aria-label="查看 LAVID 项目详情" data-reveal>
-          <div class="project-media">
-            <img src="assets/lavid.png" alt="LAVID 音视频深伪检测框架图" width="930" height="410">
-            <span class="project-number">01</span>
-            <span class="project-badge">IN PROGRESS</span>
-          </div>
           <div class="project-copy">
+            <div class="project-meta"><span class="project-number">01</span><span class="project-badge">IN PROGRESS</span></div>
             <p class="project-type">RESEARCH / AUDIO-VISUAL AI</p>
             <h3>LAVID</h3>
             <p data-zh="让轻量模型真正使用音频，而不只是依赖视觉捷径。" data-en="Making lightweight models truly use audio, rather than falling back on visual shortcuts.">
@@ -156,12 +143,8 @@
 
         <div class="project-pair">
           <article class="project tilt-card" data-project="dasc" data-cursor="OPEN" tabindex="0" role="button" aria-label="查看 DASC-GNN 项目详情" data-reveal>
-            <div class="project-media">
-              <img src="assets/dasc-gnn.jpg" alt="DASC-GNN 图神经网络框架图" width="1200" height="520">
-              <span class="project-number">02</span>
-              <span class="project-badge">IEEE TDSC / REVIEW</span>
-            </div>
             <div class="project-copy">
+              <div class="project-meta"><span class="project-number">02</span><span class="project-badge">IEEE TDSC / REVIEW</span></div>
               <p class="project-type">RESEARCH / GRAPH AI</p>
               <h3>DASC-GNN</h3>
               <p data-zh="识别同时进行特征伪装与关系伪装的欺诈节点。" data-en="Detecting fraudulent nodes disguised in both features and relationships.">
@@ -173,12 +156,8 @@
           </article>
 
           <article class="project project-dark tilt-card" data-project="aigc" data-cursor="OPEN" tabindex="0" role="button" aria-label="查看 AIGC-Trust 项目详情" data-reveal>
-            <div class="project-media">
-              <img src="assets/aigc-trust.jpg" alt="AIGC-Trust 系统架构图" width="1200" height="690">
-              <span class="project-number">03</span>
-              <span class="project-badge">SYSTEM DESIGN</span>
-            </div>
             <div class="project-copy">
+              <div class="project-meta"><span class="project-number">03</span><span class="project-badge">SYSTEM DESIGN</span></div>
               <p class="project-type">ENGINEERING / TRUSTWORTHY AI</p>
               <h3>AIGC-Trust</h3>
               <p data-zh="把 AIGC 检测做成可验证、可追踪的完整系统。" data-en="Turning AIGC detection into a verifiable and traceable end-to-end system.">
@@ -205,28 +184,23 @@
     <section class="section about-section" id="about" aria-labelledby="about-title">
       <div class="about-sticky">
         <span class="section-index">02 / ABOUT</span>
-        <h2 id="about-title" data-zh="不只让模型<br><span>看起来有效。</span>" data-en="NOT JUST MODELS<br>THAT <span>LOOK EFFECTIVE.</span>">
-          不只让模型<br><span>看起来有效。</span>
+        <h2 id="about-title" data-zh="关于我" data-en="ABOUT ME">
+          关于我
         </h2>
-        <div class="about-orbit" aria-hidden="true">
-          <i></i><i></i><i></i>
-          <b>TRUST</b>
-        </div>
       </div>
 
       <div class="about-content">
         <p class="about-lead" data-zh="我更关心：模型为什么有效、是否真的使用了预期模态、在资源受限场景里能否部署，以及结果能否被验证与追踪。" data-en="I care about why a model works, whether it uses the intended modality, whether it can run under real constraints, and whether its outcomes can be verified and traced.">
           我更关心：模型为什么有效、是否真的使用了预期模态、在资源受限场景里能否部署，以及结果能否被验证与追踪。
         </p>
-        <p data-zh="目前就读于哈尔滨工业大学（威海）计算机科学与技术专业，已保研至哈尔滨工业大学，师从 <a class=&quot;inline-link&quot; href=&quot;https://chewanxiang.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>车万翔教授</a>。我已进入哈工大赛尔实验室，研究大模型与自然语言处理；未来将到中国移动九天研究院从事结构化大模型研究。" data-en="I study Computer Science at HIT Weihai and have been admitted to HIT for graduate study with <a class=&quot;inline-link&quot; href=&quot;https://chewanxiang.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Professor Wanxiang Che</a>. I have joined the HIT Sail Lab to study LLMs and NLP, and will work on structured LLMs at China Mobile Jiutian Research Institute.">
-          目前就读于哈尔滨工业大学（威海）计算机科学与技术专业，已保研至哈尔滨工业大学，师从 <a class="inline-link" href="https://chewanxiang.com/zh/" target="_blank" rel="noopener">车万翔教授</a>。我已进入哈工大赛尔实验室，研究大模型与自然语言处理；未来将到中国移动九天研究院从事结构化大模型研究。
+        <p data-zh="目前就读于哈尔滨工业大学（威海）计算机科学与技术专业，保研至哈尔滨工业大学，师从 <a class=&quot;inline-link&quot; href=&quot;https://chewanxiang.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>车万翔教授</a>。我已进入哈工大赛尔实验室，研究大模型与自然语言处理；未来将到中国移动九天研究院从事结构化大模型研究。" data-en="I study Computer Science at HIT Weihai and have been admitted to HIT for graduate study with <a class=&quot;inline-link&quot; href=&quot;https://chewanxiang.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Professor Wanxiang Che</a>. I have joined the HIT SCIR Lab to study LLMs and NLP, and will work on structured LLMs at China Mobile Jiutian Research Institute.">
+          目前就读于哈尔滨工业大学（威海）计算机科学与技术专业，保研至哈尔滨工业大学，师从 <a class="inline-link" href="https://chewanxiang.com/zh/" target="_blank" rel="noopener">车万翔教授</a>。我已进入哈工大赛尔实验室，研究大模型与自然语言处理；未来将到中国移动九天研究院从事结构化大模型研究。
         </p>
 
         <div class="metrics">
-          <div data-reveal><strong data-count="9.4">0</strong><sup>%</sup><span>专业排名 TOP</span></div>
-          <div data-reveal><strong data-count="414">0</strong><sup>人</sup><span>39 / 414</span></div>
-          <div data-reveal><strong data-count="604">0</strong><sup></sup><span>CET-4</span></div>
-          <div data-reveal><strong data-count="591">0</strong><sup></sup><span>CET-6</span></div>
+          <div data-reveal><strong>9.4</strong><sup>%</sup><span>专业排名 TOP</span></div>
+          <div data-reveal><strong>604</strong><sup></sup><span>CET-4</span></div>
+          <div data-reveal><strong>591</strong><sup></sup><span>CET-6</span></div>
         </div>
 
         <div class="toolkit" data-reveal>
@@ -244,8 +218,8 @@
       <div class="section-heading compact" data-reveal>
         <div>
           <span class="section-index">03 / JOURNEY</span>
-          <h2 id="notes-title" data-zh="正在发生的<br><span>研究旅程。</span>" data-en="A RESEARCH JOURNEY<br><span>IN MOTION.</span>">
-            正在发生的<br><span>研究旅程。</span>
+          <h2 id="notes-title" data-zh="教育与研究经历" data-en="EDUCATION &amp; EXPERIENCE">
+            教育与研究经历
           </h2>
         </div>
       </div>
@@ -257,7 +231,7 @@
           <article>
             <span>EDUCATION</span>
             <h3>哈尔滨工业大学（威海）</h3>
-            <p>计算机科学与技术本科 · 专业排名 39 / 414</p>
+            <p>计算机科学与技术本科 · 专业排名前 9.4%</p>
           </article>
         </li>
         <li data-reveal>
@@ -309,11 +283,10 @@
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-orb" aria-hidden="true"></div>
       <span class="section-index">04 / CONTACT</span>
-      <p data-zh="有一个值得一起研究的问题？" data-en="GOT A QUESTION WORTH EXPLORING?">有一个值得一起研究的问题？</p>
-      <h2 id="contact-title" data-zh="让我们把它<br><span>做出来。</span>" data-en="LET'S MAKE IT<br><span>REAL.</span>">
-        让我们把它<br><span>做出来。</span>
+      <p data-zh="欢迎就研究问题、项目实践与合作机会交流。" data-en="Open to discussions about research, projects, and collaboration.">欢迎就研究问题、项目实践与合作机会交流。</p>
+      <h2 id="contact-title" data-zh="交流与合作" data-en="GET IN TOUCH">
+        交流与合作
       </h2>
       <div class="contact-actions">
         <a class="contact-link magnetic" href="mailto:2023212194@stu.hit.edu.cn">
@@ -325,7 +298,7 @@
       </div>
       <footer>
         <span>© 2026 LEO LIANG</span>
-        <span>DESIGNED WITH CURIOSITY</span>
+        <span>LLM &amp; NLP RESEARCH</span>
         <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </section>
@@ -345,7 +318,6 @@
         <div class="dialog-detail" id="dialogDetail"></div>
       </div>
     </div>
-    <img id="dialogImage" src="assets/lavid.png" alt="">
   </dialog>
 </body>
 </html>
