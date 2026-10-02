@@ -1610,8 +1610,8 @@ section[id] { scroll-margin-top: 104px; }
   padding-top: 157px;
   padding-bottom: 78px;
   color: var(--ink);
-  background: radial-gradient(ellipse at 68% 20%, #18284b 0, transparent 48%),
-    radial-gradient(ellipse at 8% 88%, #122a3b 0, transparent 45%), #080f1e;
+  background: linear-gradient(90deg, rgba(3, 8, 16, .65), rgba(3, 8, 16, .3) 48%, rgba(3, 8, 16, .06)),
+    url("assets/hero-cosmos.png") center center / cover no-repeat, #080f1e;
 }
 #particleField { z-index: -1; opacity: .85; }
 .space-depth { position: absolute; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
@@ -1656,7 +1656,7 @@ section[id] { scroll-margin-top: 104px; }
   .space-label-top { top: 380px; font-size: 10px; }
 }
 @media (max-width: 700px) {
-  .hero { min-height: 0; grid-template-rows: auto auto; padding: 145px 22px 82px; gap: 38px; }
+  .hero { min-height: 0; grid-template-rows: auto auto; padding: 145px 22px 82px; gap: 38px; background-position: center, 78% center; }
   .hero-title-wrap { width: 100%; margin: 0; }
   .hero-status { top: 94px; right: 22px; }
   .hero .eyebrow { font-size: 13px; letter-spacing: .02em; margin-bottom: 12px; }
