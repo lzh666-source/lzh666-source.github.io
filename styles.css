@@ -1593,3 +1593,86 @@ section[id] { scroll-margin-top: 104px; }
   .dialog-summary { font-size: 20px; }
   .dialog-detail { font-size: 17px; }
 }
+
+/* A quiet, immersive title field. The rest of the portfolio keeps its theme. */
+.hero {
+  --ink: #e5edf9;
+  --paper: #080f1e;
+  --panel: #101b2d;
+  --muted: #afbdd3;
+  --line: rgba(177, 199, 232, .18);
+  --lime: #b9d4f4;
+  --coral: #afc9eb;
+  isolation: isolate;
+  min-height: 900px;
+  grid-template-rows: minmax(280px, 1fr) auto;
+  gap: 42px;
+  padding-top: 157px;
+  padding-bottom: 78px;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 68% 20%, #18284b 0, transparent 48%),
+    radial-gradient(ellipse at 8% 88%, #122a3b 0, transparent 45%), #080f1e;
+}
+#particleField { z-index: -1; opacity: .85; }
+.space-depth { position: absolute; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
+.space-depth i { position: absolute; display: block; border-radius: 50%; will-change: transform; }
+.space-depth i:nth-child(1) { top: 6%; right: -8%; width: 640px; height: 640px; border: 1px solid #a9c9ed13; box-shadow: 0 0 100px #476ba00b, inset 0 0 100px #476ba010; animation: space-orbit 42s ease-in-out infinite alternate; }
+.space-depth i:nth-child(2) { top: 12%; right: -3%; width: 460px; height: 460px; border: 1px solid #a9c9ed0c; animation: space-orbit 36s ease-in-out -12s infinite alternate-reverse; }
+.space-depth i:nth-child(3) { top: 27%; left: 37%; width: 260px; height: 260px; background: radial-gradient(circle, #789aca17, #789aca00 68%); filter: blur(25px); animation: space-drift 28s ease-in-out infinite alternate; }
+@keyframes space-orbit { from { transform: translate3d(0, 0, 0) rotate(-8deg) scale(.96); } to { transform: translate3d(-26px, 22px, 0) rotate(8deg) scale(1.04); } }
+@keyframes space-drift { from { transform: translate3d(-30px, 12px, 0); opacity: .5; } to { transform: translate3d(30px, -20px, 0); opacity: .9; } }
+.hero-status { top: 119px; background: #101c2d80; color: #becde2; font-size: 13px; font-weight: 500; }
+.hero .status-dot { width: 5px; height: 5px; opacity: .7; box-shadow: 0 0 12px #b9d4f433; }
+.hero-title-wrap { align-self: center; max-width: 920px; width: 76%; margin-top: 0; }
+.hero .eyebrow { color: #afbdd3; font-size: 15px; font-weight: 400; letter-spacing: .08em; margin-bottom: 8px; }
+.hero h1 { position: relative; display: block; width: 100%; height: clamp(200px, 23vw, 320px); margin: 0 0 6px -20px; font-size: clamp(100px, 16vw, 230px); line-height: 1.3; letter-spacing: .12em; font-weight: 600; }
+.title-fallback { position: absolute; left: 24px; top: 10px; }
+#stardustTitle { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.particle-ready .title-fallback { opacity: 0; }
+.title-controls { display: flex; justify-content: space-between; align-items: center; gap: 20px; max-width: 720px; }
+.stardust-hint { margin: 0; font-size: 13px; letter-spacing: .06em; color: #8fabc9; }
+.sound-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 7px 14px; flex-shrink: 0; color: #bdd0e8; border: 1px solid #aec9ee27; background: #0c182980; border-radius: 999px; font-size: 13px; font-weight: 400; cursor: pointer; transition: border-color .6s, background .6s; }
+.sound-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.1; }
+.sound-toggle:hover, .sound-toggle[aria-pressed="true"] { background: #1c304980; border-color: #aec9ee65; }
+.sound-toggle:disabled { opacity: .5; cursor: default; }
+.hero-lower { position: relative; align-items: center; grid-template-columns: 148px minmax(0, 750px); gap: 44px; }
+.hero .portrait-frame { padding: 5px; border-color: #b2c5e533; background: #142034; }
+.hero .portrait-index { background: #d0dff0; color: #172235; font-size: 10px; }
+.hero .portrait-wrap figcaption { color: #a7b9d1; font-size: 11px; }
+.hero-kicker { color: #b2cbe8; font-weight: 500; }
+.hero-copy { color: #e0e8f5; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.85; font-weight: 400; }
+.hero .button-primary { background: #d0dff0; color: #172235; border-color: #d0dff0; }
+.hero .button-ghost { color: #bdd0e8; border-color: #a9c5e233; }
+.space-label { position: absolute; z-index: 2; display: inline-flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid #9fbce41c; border-radius: 3px; color: #8aa5c6; background: #0b152740; font: 11px/1.5 ui-monospace, Consolas, monospace; letter-spacing: .1em; pointer-events: none; animation: label-float 14s ease-in-out infinite alternate; }
+.space-label-top { top: 270px; right: clamp(20px, 4vw, 64px); }
+.space-label-top > span { width: 4px; height: 4px; border-radius: 50%; background: #95b6de; box-shadow: 0 0 7px #95b6de44; }
+.space-label-bottom { bottom: 25px; right: clamp(20px, 4vw, 64px); animation-delay: -6s; }
+.label-line { width: 30px; height: 1px; background: linear-gradient(90deg, #8aa5c655, transparent); }
+@keyframes label-float { from { transform: translateY(-3px); } to { transform: translateY(4px); } }
+.cursor-orbit.is-stardust { width: 32px; height: 32px; border-color: #c5d8e94d; background: transparent; }
+.cursor-orbit.is-stardust span { opacity: 0; }
+@media (max-width: 1050px) {
+  .hero-title-wrap { width: 85%; }
+  .space-label-top { top: 380px; font-size: 10px; }
+}
+@media (max-width: 700px) {
+  .hero { min-height: 0; grid-template-rows: auto auto; padding: 145px 22px 82px; gap: 38px; }
+  .hero-title-wrap { width: 100%; margin: 0; }
+  .hero-status { top: 94px; right: 22px; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: .02em; margin-bottom: 12px; }
+  .hero h1 { height: 170px; margin: 0; font-size: 88px; letter-spacing: .08em; }
+  .title-controls { align-items: flex-start; gap: 10px; }
+  .stardust-hint { font-size: 12px; line-height: 1.9; max-width: 160px; }
+  .sound-toggle { padding: 7px 12px; font-size: 12px; }
+  .hero-lower { grid-template-columns: 1fr; gap: 24px; }
+  .hero .portrait-wrap { width: 120px; }
+  .hero-copy { font-size: 20px; }
+  .space-label-top { display: none; }
+  .space-label-bottom { right: 22px; bottom: 24px; font-size: 10px; }
+  .space-depth i:nth-child(1) { width: 440px; height: 440px; right: -300px; }
+  .space-depth i:nth-child(2) { width: 300px; height: 300px; right: -200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .space-depth i, .space-label { animation: none; }
+  .stardust-hint { visibility: hidden; }
+}
